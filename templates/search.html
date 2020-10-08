@@ -1,0 +1,17 @@
+<!-- The application's Search Page template -->
+
+<!-- Extends to Base Layout template using Jinja delimeters -->
+{% extends "layout.html" %}
+{% block content %}
+    &nbsp
+    <h2>Find Patient</h2>
+    <!-- Utilized HTTP methods to return user input  -->
+    <form method="POST">
+        <input name="text" placeholder="Enter patient's first name">
+        <input type="submit">
+    </form>
+    &nbsp
+    <!-- Retrieved data from csv file after Python data manipulation -->
+    <!-- Displayed table to web page -->
+    {{content|safe}}
+{% endblock content %}
